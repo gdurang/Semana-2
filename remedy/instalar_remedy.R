@@ -1,7 +1,7 @@
 # Instalar paquete
 install.packages("remedy")
 library(remedy)
-# Ejemplog
+# Ejemplo
 remedy_example( c("Never gonna", "give you up", "let you down"), listr )
-# Atajos de treclado
+# Atajos de teclado
 remedy::remedy_opts$get('hotkeys')
