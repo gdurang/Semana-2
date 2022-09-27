@@ -1,0 +1,51 @@
+---
+title: "Aplicación de Esquisse"
+author: "Guillermo Durán González"
+date: "2022-09-27"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+#  Instalación de ESQUISSE
+
+## Carga del paqute ESQUISSE
+
+Para efectos de cargar el paquete Esquisse, se debe aplicar el siguiente comando:
+
+install.packages("esquisse",dependencies = TRUE )
+
+## carga biblioteca
+
+Una ves instalado el paquete es necesario llamar a la biblioteca "squisses" mediante el siguiente código:
+
+```{r remedy002}
+
+library(esquisse)
+
+```
+
+## Idioma 
+
+Establece idioma español
+
+```{r remedy003}
+
+set_i18n("es")
+
+```
+
+## Probando el funcionamiento de Esquisse
+
+Carag del paquete "PalmerPenguins": install.packages("palmerpenguins")
+
+
+# Ejemplo de Prueba
+
+```{r remedy005}
+
+esquisse::esquisser(palmerpenguins::penguins)
+
+```

@@ -1,0 +1,203 @@
+---
+title: "Graficos"
+author: "Guillermo Durán González"
+format: beamer
+editor: visual
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## `Gráficos`
+
+# Conjunto de datos Cars
+
+Accediendo el conjuto de datos cars
+
+```{r remedy001}
+
+data(cars)
+
+```
+
+Para tener una visión de los datos de Cars
+
+```{r remedy003}
+
+head(cars)
+
+```
+
+# Gráficos con Plot
+
+Examinando el dataset con plot()
+
+```{r remedy004}
+
+plot(cars$dist ~ cars$speed)
+
+```
+
+# Etiquetas
+
+Eje X:
+
+```{r remedy005}
+
+plot(x = cars$dist, y = cars$speed, xlab="Speed")
+
+```
+
+Ejes X e Y:
+
+```{r remedy006}
+
+plot(x = cars$speed, y = cars$dist, xlab="Speed", ylab="Stopping Distance")
+```
+
+Títulos y subtítulos en plot:
+
+Título:
+
+```{r remedy007}
+
+plot(x = cars$dist, y = cars$speed, main="My Plot")
+
+```
+
+Subtítulo:
+
+```{r remedy008}
+
+plot(cars, sub = "My Plot Subtitle")
+```
+
+# Color
+
+```{r remedy009}
+
+plot(cars, col="orange")
+
+```
+
+# delimitando los ejes
+
+Eje X:
+
+```{r remedy010}
+
+plot(cars, xlim=c(10,15))
+
+```
+
+Eje Y:
+
+```{r remedy011}
+
+plot(cars, ylim=c(20,60))
+
+```
+
+# Formas de los puntos
+
+```{r remedy012}
+
+plot(cars, pch=2, type="p")
+
+```
+
+# Tipos de Gráficos
+
+```{r remedy013}
+
+plot(cars, type="l")
+
+```
+
+# Dataset mtcars
+
+# Carga del data set
+
+```{r remedy014}
+
+data(mtcars)
+
+```
+
+# Gráficos boxplot
+
+## Fórmula
+
+```{r remedy016}
+
+boxplot(formula = mpg ~ cyl, data = mtcars)
+
+```
+
+```{r remedy16}
+
+boxplot(mpg ~ cyl, mtcars)
+
+```
+
+```{r remedy017}
+
+boxplot(mtcars$mpg ~ mtcars$cyl)
+
+```
+
+# Gráficos histograma
+
+Un ejemplo de histograma:
+
+```{r remedy019}
+
+hist(mtcars$mpg)
+
+```
+
+# Gráficos barplot
+
+```{r remedy020}
+counts <- table(mtcars$gear)
+barplot(counts, main="Car Distribution",
+   xlab="Number of Gears")
+
+```
+# De columnas a barras
+```{r remedy021}
+
+counts <- table(mtcars$gear)
+barplot(counts, main="Car Distribution", horiz=TRUE,
+  names.arg=c("3 Gears", "4 Gears", "5 Gears"))
+
+```
+# Columnas apiladas en colores
+```{r remedy022}
+
+counts <- table(mtcars$vs, mtcars$gear)
+barplot(counts, main="Car Distribution by Gears and VS",
+  xlab="Number of Gears", col=c("darkblue","red"),
+  legend = rownames(counts))
+
+```
+# Columnas juntas
+```{r remedy023}
+
+counts <- table(mtcars$vs, mtcars$gear)
+barplot(counts, main="Car Distribution by Gears and VS",
+  xlab="Number of Gears", col=c("darkblue","red"),
+  legend = rownames(counts), beside=TRUE)
+
+```
+# Barras juntas
+```{r remedy024}
+
+counts <- table(mtcars$vs, mtcars$gear)
+barplot(counts, main="Car Distribution by Gears and VS",
+  xlab="Number of Gears", col=c("darkblue","red"),
+  legend = rownames(counts), beside=TRUE, horiz=TRUE)
+
+
+```
