@@ -11,7 +11,6 @@ output:
 ## Carga del paqute ESQUISSE
 
 Para efectos de cargar el paquete Esquisse, se debe aplicar el siguiente comando:
-
 install.packages("esquisse",dependencies = TRUE )
 
 ## carga biblioteca
