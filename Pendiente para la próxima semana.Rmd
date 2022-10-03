@@ -1,0 +1,33 @@
+---
+title: "Actividad Pendiente"
+author: "Guillermo Durán González"
+date: "2022-09-28"
+output: pdf_document
+---
+## Repositorio GitHub
+
+Estudiar los materiales disponible en https://github.com/gdurang/Semana-2
+
+## Crear una cuenta en GitHub
+
+1. acceder a GitHub.com y crear una cuenta gratuita. 
+2. bajar GitHub Desktop de https://desktop.github.com/ 
+3. para configurar enlace entre GitHub y Rstudio vea: 
+https://www.youtube.com/watch?v=te1fJgn71js
+
+## Generar un PDF con rmarkdown
+
+1. use el dataset de su gusto (cars, mtcars,palmerpenguins, entre otros)
+2. cree un gráfico usando el paquete squisse
+3. copie el codigo de squisse e inserte con este un chunk en su rmarkdown.
+4. con knit genere el PDF.
+
+## Generar una PPT usando Quarto
+
+1. Inserte el código del gráfico creado mediante esquisse
+2. e incorpore un chunk con el codigo en Quatro
+3. genere el PPT con render.
+
+# Acceso a grabación segunda clase:
+
+https://udla.zoom.us/rec/share/Gof1Ge-G0tYh5qk7Bkd2jQUadrh-oT8_CCsKP2iTAAJV2NTxxz0Hp_hWy9nwhQ.FHvSqVoyrMpsJQLH?startTime=1664317015000
